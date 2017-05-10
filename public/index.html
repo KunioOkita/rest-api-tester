@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API REST Tester</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 class="header_title">
+        REST API TESTER
+      </h1>
+    </header>
+    <div id="request">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <!-- パネルで囲む -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                History recent 10.
+              </div>
+              <!-- <div class="panel-body"> -->
+              <ul id="req_history_list" class="nav nav-pills nav-stacked">
+                <li class="row">
+                  <div class="col-md-9">
+                    <a class=" history_item" href=""><i class="glyphicon glyphicon-time"></i>submenu1</a>
+                  </div>
+                  <div class="col-md-1">
+                    <i class="glyphicon glyphicon-trash delete_history"></i>
+                  </div>
+                </li>
+              </ul>
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="form-group">
+              <label>Request URI</label>
+              <input type="text" name="req_uri" class="form-control" required/>
+            </div>
+            <div class="form-group">
+              <label>Metod</label>
+              <select name="method" class="form-control">
+                <option value="GET" selected="selected">GET</option>
+                <option value="POST">POST</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div id="headers">
+                <label>Headers({key}:{value}で指定)</label>
+                <button id="add_header" class="btn glyphicon-plus"></button>
+                <div id="header_items">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Body</label>
+              <textarea name="req_body" class="form-control"></textarea>
+            </div>
+            <button id="send_req" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <br/>
+    <h2>
+      Result.
+    </h2>
+    <pre id="response">
+    </pre>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

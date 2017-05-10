@@ -1,0 +1,19 @@
+/* style.css */
+@charset "UTF-8";
+
+.header_title {
+    font-family: 'Bungee Inline', cursive;
+    margin: 20px;
+    text-align: center;
+}
+
+.history_item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nav-stacked>li {
+    margin-top: 2px;
+    margin-left: 0;
+}
